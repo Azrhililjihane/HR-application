@@ -1,0 +1,9 @@
+{% extends 'Emp.html' %}
+{% block title %}{% endblock %}
+{% block content %}
+<div class="container mt-5">
+  {% for elmt in CVKey %}
+    <img src="{{elmt.CV_image.url}}" height="500" width="500"/>
+    {% endfor %}
+</div>
+{% endblock %}

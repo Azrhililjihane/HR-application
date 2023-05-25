@@ -1,0 +1,26 @@
+{% extends 'Emp.html' %}
+{% block title %}Liste des employés{% endblock %}
+{% block content %}
+<div class="container mt-5">
+<table class="table table-hover">
+  <thead>
+     <tr class="table-dark">
+         <th scope="col">Nom</th>
+         <th scope="col">Action 1</th>
+         <th scope="col">Action 2</th>
+     </tr>
+
+  </thead>
+   <tbody>
+   {% for elmt in CompKey %}
+    <tr>
+        <td>{{ elmt.nom }}</td>
+        <td> <a href="{% url 'ComptUpdated' elmt.id %}">Modifier </a></td>
+        <td> <a href="{% url 'ComptDeleted' elmt.id %}">Supprimer </a></td>
+    </tr>
+   {% endfor %}
+   </tbody>
+
+</table>
+</div>
+{% endblock %}
