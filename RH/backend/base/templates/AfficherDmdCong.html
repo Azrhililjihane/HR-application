@@ -1,0 +1,29 @@
+{% extends 'Emp.html' %}
+{% block title %}{% endblock %}
+{% block content %}
+<div class="container mt-5">
+<table class="table table-hover">
+  <thead>
+     <tr class="table-dark">
+        <th scope="col">Nom</th>
+         <th scope="col">Prénom</th>
+         <th scope="col">Type de congés</th>
+         <th scope="col">Date de début</th>
+         <th scope="col">Date de fin</th>
+     </tr>
+
+  </thead>
+   <tbody>
+   {% for elmt in CongKey %}
+    <tr>
+        <td> {{ elmt.Nom }} </td>
+        <td>{{ elmt.Prenom }}</td>
+        <td>{{ elmt.Type }}</td>
+        <td>{{ elmt.DateDebut }}</td>
+        <td>{{ elmt.DateFin }}</td>
+    </tr>
+   {% endfor %}
+   </tbody>
+</table>
+</div>
+{% endblock %}

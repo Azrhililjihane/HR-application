@@ -1,0 +1,36 @@
+{% extends 'Resp.html' %}
+{% block title %}Détails des Employés{% endblock %}
+{% block content %}
+<div class="container mt-5">
+    <div class="row">
+       <div class="col">
+          <h2> Détail d'employé numéro {{empK.id}}</h2>
+           <div class="row">
+           <dd class="col-md-6"> Nom:</dd>
+           <dd class="col-md-6"> {{empK.nom}}</dd>
+           <dd class="col-md-6"> Prénom:</dd>
+           <dd class="col-md-6"> {{empK.prenom}}</dd>
+            <dd class="col-md-6">  Adresse:</dd>
+           <dd class="col-md-6"> {{empK.adresse}}</dd>
+           <dd class="col-md-6"> CIN:</dd>
+           <dd class="col-md-6"> {{empK.CIN}}</dd>
+           <dd class="col-md-6"> email:</dd>
+           <dd class="col-md-6"> {{empK.email}}</dd>
+           <dd class="col-md-6"> Téléphone:</dd>
+           <dd class="col-md-6"> {{empK.tel}}</dd>
+           <dd class="col-md-6"> CNSS:</dd>
+           <dd class="col-md-6"> {{empK.CNSS}}</dd>
+           <dd class="col-md-6"> Rôle:</dd>
+           <dd class="col-md-6"> {{empK.role}}</dd>
+           <dd class="col-md-6"> Les expériences:</dd>
+           <dd class="col-md-6"> {{empK.experience}}</dd>
+           <dd class="col-md-6"> Les langues:</dd>
+           <dd class="col-md-6"> {{empK.langue}}</dd>
+           <dd class="col-md-6">  profil:</dd>
+           <dd class="col-md-6"> {{empK.profil}}</dd>
+           </div>
+
+       </div>
+    </div>
+</div>
+{% endblock %}
